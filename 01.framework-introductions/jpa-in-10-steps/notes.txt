@@ -1,0 +1,32 @@
+Questions
+- Where is the database created?
+- What schema is used to create the tables?
+- Where are the tables created?
+- Can I see the data in the database?
+- Where is Hibernate coming in from?
+- How is a datasource created?
+
+Magic of Spring Boot and in Memory Database
+- Zero project setup or infrastructure
+- Zero Configuration
+- Zero Maintainance
+- Easy to use for Learning and Unit Tests
+- Simple Configuration to switch to a real database
+
+# Restrictions of using in-memory database
+- Data is not persisted between restarts
+
+Spring Boot chooses a default value for you based on whether it thinks your database is embedded (default create-drop) or not (default none). 
+
+HibernateJpaAutoConfiguration matched:
+ - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'javax.persistence.EntityManager'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
+ - HibernateEntityManager found class 'org.hibernate.ejb.HibernateEntityManager' (HibernateJpaAutoConfiguration.HibernateEntityManagerCondition)
+
+DataSourceAutoConfiguration matched:
+ - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
+
+JpaBaseConfiguration#entityManagerFactory matched:
+ - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,javax.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+JpaBaseConfiguration#transactionManager matched:
+ - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
