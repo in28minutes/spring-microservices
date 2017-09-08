@@ -22,12 +22,13 @@
 
 |     Application       |     Port          |
 | ------------- | ------------- |
+| Limits Service | 8080, 8081, ... |
+| Spring Cloud Config Server | 8888 |
+|  |  |
 | Currency Exchange Service | 8000, 8001, 8002, ..  |
 | Currency Conversion Service | 8100, 8101, 8102, ... |
-| Limits Service | 8080, 8081, ... |
 | Netflix Eureka Naming Server | 8761 |
 | Netflix Zuul API Gateway Server | 8765 |
-| Spring Cloud Config Server | 8888 |
 | Zipkin Distributed Tracing Server | 9411 |
 
 ## Installing Rabbit MQ
@@ -39,6 +40,35 @@
 - Video - https://www.youtube.com/watch?v=gKzKUmtOwR4
 
 ### Mac
+
+### Diagrams
+
+- http://dreampuf.github.io/GraphvizOnline/
+
+```
+digraph architecture {
+  rankdir=LR;
+
+node[shape=record]
+
+  subgraph Consumer {
+      Consumer[shape=plaintext] -> CurrencyCalculationService -> CurrencyExchangeService;
+      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
+  }
+  
+
+  subgraph CurrencyCalculationService {
+      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
+  }
+  
+  
+  
+  subgraph CurrencyExchangeService {
+      CurrencyExchangeService;
+      {rank=same; CurrencyExchangeService,instanceA,instanceB};
+  }
+}
+```
 
 ## Complete Code Example
 
