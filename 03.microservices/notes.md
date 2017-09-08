@@ -21,6 +21,7 @@
 ## Ports
 
 |     Application       |     Port          |
+| ------------- | ------------- |
 | Currency Exchange | 8000, 8001, 8002, ..  |
 | Currency Conversion Service | 8100, 8101, 8102, ... |
 | Limits Service | 8080, 8081, ... |
