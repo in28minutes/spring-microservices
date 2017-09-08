@@ -19,7 +19,8 @@
 - git commit -m "first commit"
 
 ## Ports
-| Application       |  Port          |
+
+|     Application       |     Port          |
 | Currency Exchange | 8000, 8001, 8002, ..  |
 | Currency Conversion Service | 8100, 8101, 8102, ... |
 | Limits Service | 8080, 8081, ... |
@@ -34,6 +35,7 @@
 - https://www.rabbitmq.com/install-windows.html
 - https://www.rabbitmq.com/which-erlang.html
 - http://www.erlang.org/downloads
+- Video - https://www.youtube.com/watch?v=gKzKUmtOwR4
 
 ### Mac
 

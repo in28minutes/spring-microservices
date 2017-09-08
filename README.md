@@ -54,6 +54,11 @@ Refer each steps
 - We will help you install Eclipse and get up and running with Maven and Tomcat.
 
 ## Installing Tools
+- Eclipse & Embedded Maven
+- Git Client - https://git-scm.com/
+- Rabbit MQ - https://www.rabbitmq.com/download.html
+
+### Basic Tools
 - Installation Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
 - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
@@ -120,7 +125,7 @@ digraph architecture {
 node[shape=record]
 
   subgraph Consumer {
-      Consumer -> CurrencyCalculationService -> CurrencyExchangeService;
+      Consumer[shape=plaintext] -> CurrencyCalculationService -> CurrencyExchangeService;
       {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
   }
   
