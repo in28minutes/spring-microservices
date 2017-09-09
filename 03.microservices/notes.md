@@ -43,31 +43,153 @@
 
 ### Diagrams
 
+- http://viz-js.com/
 - http://dreampuf.github.io/GraphvizOnline/
 
 ```
+
+
+MicroserviceCommunication
+~~~~~~~~~~~~~~~~~~~~~~~~~
+digraph architecture {
+  rankdir=TB;
+{rank=same; CurrencyCalculationService, CurrencyExchangeService, LimitsService};
+Configuration[shape=cylinder]
+Database[shape=cylinder]
+LimitsService, CurrencyCalculationService, CurrencyExchangeService[shape=component]
+
+  CurrencyCalculationService -> CurrencyExchangeService -> LimitsService;
+  
+  CurrencyExchangeService->Database;
+  LimitsService->Configuration;
+
+}
+
+Microservices-Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 digraph architecture {
   rankdir=LR;
 
 node[shape=record]
+LimitsService, CurrencyCalculationService, CurrencyExchangeService[shape=component]
 
-  subgraph Consumer {
-      Consumer[shape=plaintext] -> CurrencyCalculationService -> CurrencyExchangeService;
-      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
-  }
-  
+  CurrencyCalculationService -> CurrencyExchangeService -> LimitsService
 
   subgraph CurrencyCalculationService {
-      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
+      {rank=same; CurrencyCalculationService,CCDEV,CCQA,CCSTAGE, CCPROD};
   }
-  
-  
-  
+ 
   subgraph CurrencyExchangeService {
       CurrencyExchangeService;
-      {rank=same; CurrencyExchangeService,instanceA,instanceB};
+      {rank=same; CurrencyExchangeService,CEDEV,CEQA, CESTAGE, CEPROD};
   }
+  
+  subgraph LimitsService {
+      CurrencyExchangeService;
+      {rank=same; LimitsService,LSDEV,LSQA, LSSTAGE, LSPROD};
+  }
+ 
 }
+
+
+SpringCloudConfigServer
+#######################
+digraph architecture {
+rankdir = TB;
+node[shape=component]
+Git[shape=cylinder]
+{rank=same; CurrencyCalculationService, CurrencyExchangeService, LimitsService};
+CurrencyExchangeService -> SpringCloudConfigServer;
+CurrencyCalculationService -> SpringCloudConfigServer;
+LimitsService -> SpringCloudConfigServer
+SpringCloudConfigServer -> Git
+
+}
+
+EUREKANAMINGSERVER
+#######################
+digraph architecture {
+rankdir = TB;
+node[shape=component]
+{rank=same; CurrencyCalculationService, CurrencyExchangeService, LimitsService};
+CurrencyExchangeService -> EurekaNamingServer;
+CurrencyCalculationService -> EurekaNamingServer;
+LimitsService -> EurekaNamingServer
+}
+
+RibbonClientSideLoadBalancing
+#######################
+digraph architecture {
+rankdir = TB;
+node[shape=component]
+Ribbon[shape=underline]
+
+{rank=same; CurrencyExchangeService1, CurrencyExchangeService2, CurrencyExchangeService3};
+{rank=same; Ribbon, NamingServer };
+Ribbon -> CurrencyExchangeService1
+Ribbon -> CurrencyExchangeService2
+Ribbon -> CurrencyExchangeService3
+CurrencyCalculationService -> Ribbon
+Ribbon -> NamingServer
+
+}
+
+ZipkinDistributedTracingServer
+###############################
+digraph architecture {
+rankdir = TB;
+node[shape=component]
+Database[shape=cylinder]
+RabbitMQ[shape=underline]
+{rank=same; CurrencyCalculationService, CurrencyExchangeService, LimitsService};
+CurrencyExchangeService -> RabbitMQ
+CurrencyCalculationService -> RabbitMQ;
+LimitsService -> RabbitMQ
+RabbitMQ -> ZipkinDistributedTracingServer
+ZipkinDistributedTracingServer -> Database
+
+}
+
+CurrencyExchangeMicroserviceDeployment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+digraph architecture {
+rankdir = TB;
+node[shape=record]
+{rank=same; DEV, QA, STAGE, PROD};
+
+DEV -> DEV1
+
+QA -> QA1
+QA -> QA2
+
+STAGE -> STAGE1
+
+PROD -> PROD1
+PROD -> PROD2
+PROD -> PROD3
+PROD -> PROD4
+
+}
+
+CurrencyConversionMicroserviceDeployment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+digraph architecture {
+rankdir = TB;
+node[shape=record]
+{rank=same; DEV, QA, STAGE, PROD};
+
+DEV -> DEV1
+
+QA -> QA1
+QA -> QA2
+
+STAGE -> STAGE1
+
+PROD -> PROD1
+
+}
+
+
 ```
 
 ## Complete Code Example
