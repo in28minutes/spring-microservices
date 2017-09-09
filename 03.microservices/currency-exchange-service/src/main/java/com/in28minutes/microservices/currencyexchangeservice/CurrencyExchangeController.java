@@ -1,7 +1,5 @@
 package com.in28minutes.microservices.currencyexchangeservice;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
