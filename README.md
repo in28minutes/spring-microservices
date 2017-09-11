@@ -15,8 +15,6 @@ Learn how to create awesome Microservices and RESTful web services with Spring a
 
 ### Introduction
 
-- TODO - Step-29-RERECORD THIS TO CHECK JPA Section Out--Overview-of-Connecting-RESTful-Service-to-JPA
-
 Developing RESTful web services is fun. The combination of Spring Boot, Spring Web MVC, Spring Web Services and JPA makes it even more fun. And its even more fun to create Microservices.
 
 There are two parts to this course - RESTful web services and Microservices
@@ -29,18 +27,25 @@ In the first part of the course, you will learn the basics of RESTful web servic
 
 In this part of the course, you will be using Spring (Dependency Management), Spring MVC (or Spring REST), Spring Boot, Spring Security (Authentication and Authorization), Spring Boot Actuator (Monitoring), Swagger (Documentation), Maven (dependencies management), Eclipse (IDE), Postman (REST Services Client) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
-In the second part of the course, you will learn the basics of Microservices. 
+In the second part of the course, you will learn the basics of Microservices. You will understand how to implement microservices using Spring Cloud.
 
-In this part of the course, you will learn... TODO...
+In this part of the course, you will learn to establish communication between microservices, enable load balancing, scaling up and down of microservices. You will also learn to centralize configuration of microservices with Spring Cloud Config Server. You will implement Eureka Naming Server and Distributed tracing with Spring Cloud Sleuth and Zipkin. You will create fault toleranct microservices with Zipkin
+
 
 ### You will learn
 - You will be able to develop and design RESTful web services
-- You will understand the best practices in designing RESTful web services
+- You will setup Centralized Microservice Configuration with Spring Cloud Config Server
 - You will understand how to implement Exception Handling, Validation, HATEOAS and filtering for RESTful Web Services.
+- You will implement client side load balancing (Ribbon), Dynamic scaling(Eureka Naming Server) and an API Gateway (Zuul)
+- You will learn to implement Distributed tracing for microservices with Spring Cloud Sleuth and Zipkin
+- You will implement Fault Tolerance for microservices with Zipkin
 - You will understand how to version your RESTful Web Services
 - You will understand how to monitor RESTful Services with Spring Boot Actuator
 - You will understand how to document RESTful Web Services with Swagger
-- TODO Microservices
+- You will understand the best practices in designing RESTful web services
+- Using Spring Cloud Bus to exchange messages about Configuration updates
+- Simplify communication with other Microservices using Feign REST Client
+
 
 ### Step Wise Details
 Refer each steps
@@ -55,6 +60,7 @@ Refer each steps
 
 ## Installing Tools
 - Eclipse & Embedded Maven
+- PostMan
 - Git Client - https://git-scm.com/
 - Rabbit MQ - https://www.rabbitmq.com/download.html
 
@@ -128,29 +134,4 @@ Refer each steps
 
 ### Diagrams
 
-- http://dreampuf.github.io/GraphvizOnline/
-
-```
-digraph architecture {
-  rankdir=LR;
-
-node[shape=record]
-
-  subgraph Consumer {
-      Consumer[shape=plaintext] -> CurrencyCalculationService -> CurrencyExchangeService;
-      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
-  }
-  
-
-  subgraph CurrencyCalculationService {
-      {rank=same; CurrencyCalculationService,instance1,instance2,instance3};
-  }
-  
-  
-  
-  subgraph CurrencyExchangeService {
-      CurrencyExchangeService;
-      {rank=same; CurrencyExchangeService,instanceA,instanceB};
-  }
-}
-```
+- Check notes.md
