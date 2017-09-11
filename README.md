@@ -2,7 +2,7 @@
 Learn how to create awesome Microservices and RESTful web services with Spring and Spring Boot.
 
 ## Overview
-* [Installing Eclipse, Maven and Java](#installing-tools)
+* [Installing Tools](#installing-tools)
 * [Running Examples](#running-examples)
 * [Course Overview](#course-overview)
   - [Course Steps](#step-list)
