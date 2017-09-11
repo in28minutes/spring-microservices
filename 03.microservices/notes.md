@@ -34,16 +34,6 @@
 | Netflix Zuul API Gateway Server | 8765 |
 | Zipkin Distributed Tracing Server | 9411 |
 
-## Installing Rabbit MQ
-
-### Windows
-- https://www.rabbitmq.com/install-windows.html
-- https://www.rabbitmq.com/which-erlang.html
-- http://www.erlang.org/downloads
-- Video - https://www.youtube.com/watch?v=gKzKUmtOwR4
-
-### Mac
-
 ### Diagrams
 
 - http://viz-js.com/
