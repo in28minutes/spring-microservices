@@ -102,7 +102,7 @@ You will learn
 
 |     Application       |     URL          |
 | ------------- | ------------- |
-| Limits Service | http://localhost:8080/limits|
+| Limits Service | http://localhost:8080/limits POST -> http://localhost:8080/application/refresh|
 |Spring Cloud Config Server| http://localhost:8888/limits-service/default http://localhost:8888/limits-service/dev |
 |  Currency Converter Service - Direct Call| http://localhost:8100/currency-converter/from/USD/to/INR/quantity/10|
 |  Currency Converter Service - Feign| http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/10000|
