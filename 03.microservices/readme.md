@@ -13,10 +13,14 @@ You will learn
 - Implement Distributed tracing with Spring Cloud Sleuth and Zipkin
 - Implement Fault Tolerance with Zipkin
 
-## Steps
+## Microservices Introduction
+
 - Step 00 - 01 - Introduction to Microservices
 - Step 00 - 02 - Challenges with Microservices
-- Step 00 - 03 - Microservice Solutions
+- Step 00 - 03 - Microservice Solutions REMOVE THIS
+- Step 00 - 04 - Introduction to Spring Cloud TODO
+
+## Microservices Step by Step
 
 #### Spring Cloud Config Server
 - Step 00 - 04 - Introduction to Limits Microservice and Spring Cloud Config Server
@@ -70,6 +74,15 @@ You will learn
 - Step 42 - Understanding the need for Spring Cloud Bus
 - Step 43 - Implementing Spring Cloud Bus
 - Step 44 - Fault Tolerance with Hystrix
+
+## Microservices Demo
+- Step 91 - Spring Cloud Config Server Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step11.zip
+- Step 92 - Two Microservices - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step20.zip
+- Step 93 - Auto Scaling with Eureka Naming Server, Ribbon and Feign - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step29.zip
+- Step 94 - Zuul API Gateway Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step34.zip
+- Step 95 - Distributed Tracing with Zipkin - Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step41.zip
+- Step 96 - Spring Cloud Bus Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step43.zip
+- Step 97 - Fault Tolerance with Hysterix Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step44.zip
 
 ## Ports
 
