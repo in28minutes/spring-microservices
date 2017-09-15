@@ -117,11 +117,30 @@ You will learn
 -Dserver.port=8001
 
 ## Commands
-- mkdir git-configuration-repo
-- cd git-configuration-repo/
-- git init
-- git add -A
-- git commit -m "first commit"
+
+```
+mkdir git-configuration-repo
+cd git-configuration-repo/
+git init
+git add -A
+git commit -m "first commit"
+```
+
+## Spring Cloud Configuration
+
+```
+spring.cloud.config.failFast=true
+
+```
+
+## More Reading about Microservices
+- Design and Governance of Microservices
+    - https://martinfowler.com/microservices/
+- 12 Factor App 
+    - https://12factor.net/
+    - https://dzone.com/articles/the-12-factor-app-a-java-developers-perspective
+- Spring Cloud
+    - http://projects.spring.io/spring-cloud/
 
 ## Complete Code Example
 
