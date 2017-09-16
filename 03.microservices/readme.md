@@ -75,14 +75,6 @@ You will learn
 - Step 43 - Implementing Spring Cloud Bus
 - Step 44 - Fault Tolerance with Hystrix
 
-## Microservices Demo
-- Step 91 - Spring Cloud Config Server Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step11.zip
-- Step 92 - Two Microservices - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step20.zip
-- Step 93 - Auto Scaling with Eureka Naming Server, Ribbon and Feign - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step29.zip
-- Step 94 - Zuul API Gateway Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step34.zip
-- Step 95 - Distributed Tracing with Zipkin - Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step41.zip
-- Step 96 - Spring Cloud Bus Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step43.zip
-- Step 97 - Fault Tolerance with Hysterix Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step44.zip
 
 ## Ports
 
@@ -1890,3 +1882,12 @@ public class ZipkinDistributedTracingServerApplicationTests {
 }
 ```
 ---
+
+## TODO - Microservices Demo
+- Step 91 - Spring Cloud Config Server Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step11.zip
+- Step 92 - Two Microservices - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step20.zip
+- Step 93 - Auto Scaling with Eureka Naming Server, Ribbon and Feign - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step29.zip
+- Step 94 - Zuul API Gateway Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step34.zip
+- Step 95 - Distributed Tracing with Zipkin - Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step41.zip
+- Step 96 - Spring Cloud Bus Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step43.zip
+- Step 97 - Fault Tolerance with Hysterix Demo - https://github.com/in28minutes/spring-microservices/blob/master/03.microservices/step44.zip
