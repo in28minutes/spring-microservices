@@ -194,6 +194,29 @@ MicroserviceCommunication
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 digraph architecture {
   rankdir=TB;
+{rank=same; MovieService, CustomerService, ReviewService, BookingService, FareCalculationService};
+DB1,DB2,DB3,DB4,DB5[shape=cylinder]
+MovieService, CustomerService, ReviewService, BookingService, FareCalculationService[shape=component]
+
+  MovieService->DB1;
+  CustomerService->DB2;
+ReviewService->DB3;
+BookingService ->DB4;
+FareCalculationService ->DB5;
+
+
+}
+
+digraph architecture {
+  rankdir=TB;
+{rank=same; MovieApplication};
+LARGEDB[shape=cylinder];
+  MovieApplication->LARGEDB;
+
+}
+
+digraph architecture {
+  rankdir=TB;
 {rank=same; CurrencyCalculationService, CurrencyExchangeService, LimitsService};
 Configuration[shape=cylinder]
 Database[shape=cylinder]
