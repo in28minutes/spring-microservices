@@ -1,23 +1,25 @@
-Goals
-Enable building production ready applications quickly
-Provide common non-functional features 
-- embedded servers
-- metrics
-- health checks
-- externalized configuration
+## Spring Boot
 
-What Spring Boot is NOT!
-ZERO code generation
-Neither an application server nor a web server
+### Goals
+- Enable building production ready applications quickly
+- Provide common non-functional features 
+  - embedded servers
+  - metrics
+  - health checks
+  - externalized configuration
 
-Features
-Quick Starter Projects with Auto Configuration
- - Web
- - JPA
-Embedded Servers - Tomcat, Jetty or Undertow
-Production-ready features
- - metrics and health checks 
- - externalized configuration
+### What Spring Boot is NOT!
+- ZERO code generation
+- Neither an application server nor a web server
+
+### Features
+- Quick Starter Projects with Auto Configuration
+   - Web
+   - JPA
+- Embedded Servers - Tomcat, Jetty or Undertow
+- Production-ready features
+   - metrics and health checks 
+   - externalized configuration
  
  
 http://localhost:8080/books => Few hardcoded books
