@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.0.M2</version>
+		<version>2.0.0.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -376,6 +376,7 @@ import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -405,9 +406,9 @@ public class HelloWorldController {
 	}
 
 	@GetMapping(path = "/hello-world-internationalized")
-	public String helloWorldInternationalized(
-			@RequestHeader(name="Accept-Language", required=false) Locale locale) {
-		return messageSource.getMessage("good.morning.message", null, locale);
+	public String helloWorldInternationalized() {
+		return messageSource.getMessage("good.morning.message", null, 
+									LocaleContextHolder.getLocale());
 	}
 
 }
@@ -424,9 +425,8 @@ import java.util.Locale;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
 @SpringBootApplication
 public class RestfulWebServicesApplication {
@@ -437,16 +437,9 @@ public class RestfulWebServicesApplication {
 	
 	@Bean
 	public LocaleResolver localeResolver() {
-		SessionLocaleResolver localeResolver = new SessionLocaleResolver();
+		AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
 		localeResolver.setDefaultLocale(Locale.US);
 		return localeResolver;
-	}
-	
-	@Bean
-	public ResourceBundleMessageSource messageSource() {
-		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasename("messages");
-		return messageSource;
 	}
 }
 ```
@@ -741,8 +734,9 @@ public class UserResource {
 
 ```properties
 logging.level.org.springframework = info
+#This is not really needed as this is the default after 2.0.0.RELEASE
 spring.jackson.serialization.write-dates-as-timestamps=false
-management.security.enabled=false
+management.endpoints.web.exposure.include=*
 ```
 ---
 
