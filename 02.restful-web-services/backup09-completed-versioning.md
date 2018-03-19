@@ -888,6 +888,7 @@ public class PersonVersioningController {
 logging.level.org.springframework = info
 #This is not really needed as this is the default after 2.0.0.RELEASE
 spring.jackson.serialization.write-dates-as-timestamps=false
+spring.messages.basename=messages
 management.endpoints.web.exposure.include=*
 ```
 ---
