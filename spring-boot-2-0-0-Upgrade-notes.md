@@ -38,6 +38,7 @@ Take a look at https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2
 - 03.MicroservicesWithSpringCloud-Step-27---Connecting-Currency-Exchange-Microservice-to-Eureka
 - 03.MicroservicesWithSpringCloud-Step-36---Implementing-Spring-Cloud-Sleuth
 - 03.MicroservicesWithSpringCloud-Step-39---Setting-up-Distributed-Tracing-with-Zipkin
+- 03.MicroservicesWithSpringCloud-Step-41---Using-Zipkin-UI-Dashboard-to-trace-requests
 - 04.JPA-In-Depth-Step-59---Transaction-Management---ACID-Properties
 - 05.Spring-Boot-Advanced-Step-13-Spring-Boot-Actuator-Monitor-your-Spring-Boot-applications!
 - 05.Spring-Boot-Advanced-Step-27-Configure-Spring-Security-user-roles-for-survey-and-other-services-Part1
