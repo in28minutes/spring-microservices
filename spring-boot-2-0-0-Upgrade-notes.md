@@ -23,6 +23,7 @@ Take a look at https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2
 - v2.0.0 RELEASE - March 01 2018
 
 ## New Videos Created/Updated
+
 - 01.IntroductionToSpringFramework-Step01-SettingUpASpringProjectUsingSpringInitializr
 - 02.RestfulWebServices-Step-08---Implementing-GET-Methods-for-User-Resource
 - 02.RestfulWebServices-Step-18---Internationalization-for-RESTful-Services
@@ -39,6 +40,9 @@ Take a look at https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2
 - 03.MicroservicesWithSpringCloud-Step-36---Implementing-Spring-Cloud-Sleuth
 - 03.MicroservicesWithSpringCloud-Step-39---Setting-up-Distributed-Tracing-with-Zipkin
 - 03.MicroservicesWithSpringCloud-Step-41---Using-Zipkin-UI-Dashboard-to-trace-requests
+- 03.MicroservicesWithSpringCloud-Step-42---Understanding-the-need-for-Spring-Cloud-Bus-20180412.mp4
+- 03.MicroservicesWithSpringCloud-Step-43---Implementing-Spring-Cloud-Bus-20180412.mp4
+
 - 04.JPA-In-Depth-Step-59---Transaction-Management---ACID-Properties
 - 05.Spring-Boot-Advanced-Step-13-Spring-Boot-Actuator-Monitor-your-Spring-Boot-applications!
 - 05.Spring-Boot-Advanced-Step-27-Configure-Spring-Security-user-roles-for-survey-and-other-services-Part1
