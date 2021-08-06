@@ -13,6 +13,7 @@ public class SpringbootIn10StepsApplication {
 				SpringApplication.run(SpringbootIn10StepsApplication.class, args);
 
 		System.out.println("test comment.");
+		System.out.println("test comment.1");
 		
 		for (String name : applicationContext.getBeanDefinitionNames()) {
 			System.out.println(name);
