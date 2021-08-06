@@ -11,6 +11,8 @@ public class SpringbootIn10StepsApplication {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = 
 				SpringApplication.run(SpringbootIn10StepsApplication.class, args);
+
+		System.out.println("test comment.");
 		
 		for (String name : applicationContext.getBeanDefinitionNames()) {
 			System.out.println(name);
