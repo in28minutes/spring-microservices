@@ -45,7 +45,7 @@ public class BooksController {
 
 MongoClient mongoClient = new MongoClient(
     new MongoClientURI(
-        "mongodb+srv://dbUser:Learning%401@cluster0.qtfhq.mongodb.net/test?authSource=admin&replicaSet=atlas-p6np1v-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+        //MongoDBURL
     )
 );
 MongoDatabase database = mongoClient.getDatabase("sample_airbnb");
