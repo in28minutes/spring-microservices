@@ -122,7 +122,7 @@
 		<repository>
 			<id>jfrog-snapshots</id>
 			<name>JFROG Snapshots</name>
-			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+			<url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
